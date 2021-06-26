@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="TodoREST.Views.TodoItemPage" 
+			 Title="Add School">
+	<StackLayout Margin="20">
+		<Label Text="Name" />
+		<Entry Text="{Binding Path=Name}" 
+               Placeholder="Enter Name of School" />
+		<Label Text="Principal" />
+		<Entry Text="{Binding Path=Principal}"
+               Placeholder="Enter Principal Name" />
+		<Label Text="Address" />
+        <Entry Text="{Binding Path=Address}"
+               Placeholder="Enter the Address" />
+        <Label Text="Foundation Date" />
+        <Entry Text="{Binding Path=FoundationDate}"
+               Placeholder="Enter the Date" />
+        <DatePicker MinimumDate="01/01/1933"
+                    MaximumDate="01/01/2021" />
+            <Button Text="Save"
+                Clicked="OnSaveButtonClicked" />
+		<Button Text="Delete"
+                Clicked="OnDeleteButtonClicked" />
+		<Button Text="Cancel" 
+                Clicked="OnCancelButtonClicked" />
+	</StackLayout>
+</ContentPage>
